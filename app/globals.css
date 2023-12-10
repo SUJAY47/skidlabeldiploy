@@ -1,0 +1,221 @@
+/* .buttonPrint{
+  background-color: #203650;
+  color: aliceblue;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: fixed; 
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+} */
+
+/* 
+.print button{
+  background-color: #203650;
+  color: aliceblue;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.print button:hover{
+  background-color: #0099a1;
+}
+
+.print, h3{
+  font-weight: 300;
+}
+
+.print .en-tete {
+  background-color: #203650;
+  padding: 1rem;
+  color: aliceblue;
+}
+.print .en-tete h2{
+  margin-top: .3rem;
+} */
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top : 50px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.maincontainer {
+  /* page-break-after: always; */
+}
+
+.labelcontainer {
+  margin-top: 320px;
+  /* min-width: 217mm; */
+  /* width: 8.27in; */
+  /* height: 11.69in; */
+  /* margin: 0 auto; */
+  background-color: white;
+  page-break-after: always;
+}
+
+.skidlabel {
+  text-align: center;
+  /* margin-top:300px; */
+  margin-bottom: 50px;
+}
+
+.skidlabel h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-weight: lighter;
+  font-size: 50px;
+}
+
+.ctp {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.ctp2 {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.ctp3 {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 50px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+th, td {
+  border: 1.5px solid black;
+  padding: 8px;
+  text-align: left;
+}
+/* Style to make the first cell transparent */
+.tableone tr:first-child td:first-child {
+  border:0px
+}
+
+.tableone tr:first-child td:nth-child(2) {
+  border: 0px;
+}
+
+.tableone tr:first-child td:nth-child(3) {
+  width: 90px;
+  height: 30px;
+}
+
+.tableone tr:nth-child(2) td:first-child {
+  width: 100px;
+  height: 30px;
+}
+
+.tableone tr:first-child td:nth-child(4) {
+  /* width: 460px */
+}
+
+.tabletwo tr td {
+  height: 30px;
+  font-size: 12px;
+}
+
+.tablethree tr td {
+  height: 30px;
+  font-size: 12px;
+}
+
+.tabletwo tr:first-child td:first-child {
+  width: 80px;
+}
+
+.tabletwo tr:first-child td:nth-child(2) {
+  width: 70px;
+}
+
+
+.tabletwo tr:first-child td:nth-child(3) {
+  width: 40px;
+}
+
+.tabletwo tr:first-child td:nth-child(4) {
+  width: 80px;
+}
+
+.tabletwo tr:first-child td:nth-child(5) {
+  width: 110px;
+}
+
+.tablethree tr:first-child td:first-child {
+  width: 80px;
+}
+
+.tablethree tr:first-child td:nth-child(2) {
+  width: 70px;
+}
+
+.tablethree tr:first-child td:nth-child(3) {
+  width: 40px;
+}
+
+.tablethree tr:first-child td:nth-child(4) {
+  width: 80px;
+}
+
+.tablethree tr:first-child td:nth-child(5) {
+  width: 110px;
+}
+
+.footerone {
+  font-size: 9px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
