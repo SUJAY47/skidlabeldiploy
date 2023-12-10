@@ -1,9 +1,8 @@
 'use client'
 import { useEffect, useState } from "react";
 import { useSearchParams,useRouter } from 'next/navigation';
-import ReactToPrint from 'react-to-print';
 
-const Numbers = ({reference}) => {
+const Numbers = () => {
   const searchPharams = useSearchParams()
   const [printData,setPrintdata] = useState()
   const [gdno,setGdno] = useState()
