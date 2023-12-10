@@ -28,14 +28,14 @@ const Numbers = () => {
     setCtno(searchPharams.get('ctno'))
     setDate(searchPharams.get("date"))
     setName(searchPharams.get('name'))
-  }),[]
+  }),[searchPharams]
 
   const numbersArray = generateNumbers();
 
   return (
     <>
     {numbersArray.map((number) => (
-    <div className="mainContainer">
+    <div className="mainContainer" key={number}>
           <div className="labelcontainer">
           <div className="skidlabel">
             <h1>Skid Label</h1>
