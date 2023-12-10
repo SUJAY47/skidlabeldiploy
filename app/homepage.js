@@ -17,7 +17,6 @@ const InputData = () => {
       ...prevData,
       [name]: value,
     }));
-    console.log("type", inputData);
   };
 
 
@@ -85,4 +84,4 @@ const InputData = () => {
   );
 }
 
-export default inputdata;
+export default InputData;
