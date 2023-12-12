@@ -1,12 +1,12 @@
 'use client'
 import React from "react";
-import Homepage from './homepage'
+import Landingpage from './landingpage'
 // import {MyContextProvider} from './cotextapi'
 
 function page() {
 
     return(
-      <Homepage/>
+      <Landingpage/>
     )
   }
 
