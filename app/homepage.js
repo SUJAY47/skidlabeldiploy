@@ -6,6 +6,7 @@ const InputData = () => {
   const [inputData, setInputData] = useState({
     skidno: "",
     gdno: "",
+    color:"",
     ctno: "",
     date: "",
     name: "",
@@ -17,8 +18,8 @@ const InputData = () => {
       ...prevData,
       [name]: value,
     }));
+    console.log("www",e.target)
   };
-
 
   return (
     <div className="container">
@@ -43,6 +44,15 @@ const InputData = () => {
             name="gdno"
             value={inputData.gdno}
           />
+        </div>
+        <div>
+          <h2>Select color:</h2>
+          <select onChange={handleInputChange} id="input6" name="color">
+            <option value="b">Black</option>
+            <option value="bl">Blue</option>
+            <option value="r">Red</option>
+            <option value="y">orange</option>
+          </select>
         </div>
         <div className="form-group">
           <label for="input3">CT Number:</label>
@@ -74,14 +84,12 @@ const InputData = () => {
             value={inputData.name}
           />
         </div>
-        <Link href={{pathname:'pdffile',query:inputData}}>
-        <button>
-          view the label
-        </button>
+        <Link href={{ pathname: "pdffile", query: inputData }}>
+          <button>view the label</button>
         </Link>
       </form>
     </div>
   );
-}
+};
 
 export default InputData;

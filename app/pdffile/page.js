@@ -9,8 +9,8 @@ const Numbers = () => {
   const [ctno,setCtno] = useState()
   const [date,setDate] = useState()
   const [name,setName] = useState()
+  let [color,setColor] = useState()
   const numbers = [];
-  const router = useRouter()
 
   const generateNumbers = () => {
     for (let i = 1; i <= printData; i++) {
@@ -28,8 +28,9 @@ const Numbers = () => {
     setCtno(searchPharams.get('ctno'))
     setDate(searchPharams.get("date"))
     setName(searchPharams.get('name'))
+    setColor(searchPharams.get('color'))
   }),[searchPharams]
-
+  console.log("color",color)
   const numbersArray = generateNumbers();
 
   return (
@@ -54,7 +55,17 @@ const Numbers = () => {
                   <br />
                   GD Number
                 </td>
-                <td>GD{gdno}</td>
+                {
+                color=='b' ?
+                <td style={{fontSize:'20px'}}>GD{gdno}</td>:
+                color=='bl' ? 
+                <td style={{color:'blue',fontSize:'20px'}}>GD{gdno}</td>:
+                color=='r' ? 
+                <td style={{color:'red',fontSize:'20px'}}>GD{gdno}</td>:
+                color=='y'?
+                <td style={{color:'orange',fontSize:'20px'}}>GD{gdno}</td>:
+                <td style={{fontSize:'20px'}}>GD{gdno}</td>
+                }
                 <td>CT Number</td>
                 <td>CT{ctno}</td>
               </tr>
