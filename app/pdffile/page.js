@@ -50,24 +50,24 @@ const Numbers = () => {
                 <td key={number}>{number}</td>
               </tr>
               <tr>
-                <td>
+                <td style={{textAlign:'center'}}>
                   ERP#
                   <br />
                   GD Number
                 </td>
                 {
                 color=='b' ?
-                <td style={{fontSize:'20px'}}>GD{gdno}</td>:
+                <td style={{fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
                 color=='bl' ? 
-                <td style={{color:'blue',fontSize:'20px'}}>GD{gdno}</td>:
+                <td style={{color:'blue',fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
                 color=='r' ? 
-                <td style={{color:'red',fontSize:'20px'}}>GD{gdno}</td>:
+                <td style={{color:'red',fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
                 color=='y'?
-                <td style={{color:'orange',fontSize:'20px'}}>GD{gdno}</td>:
-                <td style={{fontSize:'20px'}}>GD{gdno}</td>
+                <td style={{color:'orange',fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
+                <td style={{fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>
                 }
                 <td>CT Number</td>
-                <td>CT{ctno}</td>
+                <td style={{fontFamily:'serif'}}>CT{ctno}</td>
               </tr>
             </table>
           </div>
@@ -82,6 +82,9 @@ const Numbers = () => {
                 <td>{name}</td>
               </tr>
             </table>
+          </div>
+          <div className="windownote">
+            If item required windowing, must fill up below
           </div>
           <div className="ctp3">
             <table className="tablethree">

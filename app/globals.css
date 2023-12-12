@@ -102,30 +102,30 @@ input[type="submit"]:hover {
 }
 
 .skidlabel h1 {
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'gergia,serif';
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .ctp {
   margin-left: 30px;
   margin-right: 30px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .ctp2 {
   margin-top: 40px;
   margin-left: 30px;
   margin-right: 30px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .ctp3 {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
   padding-bottom: 50px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 table {
@@ -148,17 +148,26 @@ th, td {
 }
 
 .tableone tr:first-child td:nth-child(3) {
-  width: 90px;
+  width: 80px;
   height: 30px;
 }
 
 .tableone tr:nth-child(2) td:first-child {
-  width: 100px;
+  width: 80px;
   height: 30px;
 }
 
-.tableone tr:first-child td:nth-child(4) {
-  /* width: 460px */
+.tableone tr:nth-child(2) td:nth-child(2) {
+  width: 200px;
+}
+
+.tableone tr:nth-child(2) td:nth-child(3){
+  width: 80px;
+  height: 30px;
+}
+
+.tableone tr:nth-child(2) td:nth-child(4) {
+  width: 200px;
 }
 
 .tabletwo tr td {
@@ -172,11 +181,11 @@ th, td {
 }
 
 .tabletwo tr:first-child td:first-child {
-  width: 80px;
+  width: 85px;
 }
 
 .tabletwo tr:first-child td:nth-child(2) {
-  width: 70px;
+  width: 130px;
 }
 
 
@@ -189,15 +198,22 @@ th, td {
 }
 
 .tabletwo tr:first-child td:nth-child(5) {
-  width: 110px;
+  width: 100px;
+}
+
+.windownote {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .tablethree tr:first-child td:first-child {
-  width: 80px;
+  width: 85px;
 }
 
 .tablethree tr:first-child td:nth-child(2) {
-  width: 70px;
+  width: 130px;
 }
 
 .tablethree tr:first-child td:nth-child(3) {
@@ -209,7 +225,7 @@ th, td {
 }
 
 .tablethree tr:first-child td:nth-child(5) {
-  width: 110px;
+  width: 100px;
 }
 
 .footerone {
