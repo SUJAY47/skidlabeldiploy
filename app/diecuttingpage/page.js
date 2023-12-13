@@ -45,9 +45,9 @@ const InputData = () => {
             value={inputData.gdno}
           />
         </div>
-        <div>
-          <h2>Select color:</h2>
-          <select onChange={handleInputChange} id="input6" name="color">
+        <div style={{display:'flex',marginBottom:'10px'}}>
+          <label style={{marginTop:'10px'}}>Select color:</label>
+          <select className="selecttag" style={{marginLeft:'10px'}} onChange={handleInputChange} id="input6" name="color">
             <option value="b">Black</option>
             <option value="bl">Blue</option>
             <option value="r">Red</option>
@@ -85,7 +85,7 @@ const InputData = () => {
           />
         </div>
         <Link href={{ pathname: "pdffile", query: inputData }}>
-          <button>view the label</button>
+          <button className="viewlabelbutton">view the label</button>
         </Link>
       </form>
     </div>

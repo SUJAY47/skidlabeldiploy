@@ -38,6 +38,53 @@
   margin-top: .3rem;
 } */
 
+.selecttag {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  appearance: none;
+}
+
+.selecttag:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #5f5652; /* Change border color when focused */
+  box-shadow: 0 0 5px rgba(93, 98, 102, 0.5); /* Add a subtle box shadow */
+}
+
+.selecttag:hover {
+  border-color: #2e3336;
+}
+
+.selecttag::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #c2b1b1;
+}
+
+.viewlabelbutton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #3498db;
+  color: #3498db;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.viewlabelbutton:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
 
 .container {
   max-width: 600px;
