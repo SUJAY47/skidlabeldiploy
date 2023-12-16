@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const InputData = () => {
   const [inputData, setInputData] = useState({
-    skidno: "",
+    skidnofrom: "",
+    skidnoto:"",
     gdno: "",
     color:"",
     ctno: "",
@@ -26,13 +27,21 @@ const InputData = () => {
       <h2>Input Form</h2>
       <form>
         <div className="form-group">
-          <label for="input1">Number of skid:</label>
+          <label for="input1">Number of skid from:</label>
           <input
             onChange={handleInputChange}
             type="number"
             id="input1"
-            name="skidno"
-            value={inputData.skidno}
+            name="skidnofrom"
+            value={inputData.skidnofrom}
+          />
+          <label for="input1.1">To:</label>
+          <input
+            onChange={handleInputChange}
+            type="number"
+            id="input1.1"
+            name="skidnoto"
+            value={inputData.skidnoto}
           />
         </div>
         <div className="form-group">

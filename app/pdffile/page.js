@@ -4,7 +4,8 @@ import { useSearchParams,useRouter } from 'next/navigation';
 
 const Numbers = () => {
   const searchPharams = useSearchParams()
-  const [printData,setPrintdata] = useState()
+  const [skidnofrom,setSkidnofrom] = useState()
+  const [skidnoto,setSkidnoto] = useState()
   const [gdno,setGdno] = useState()
   const [ctno,setCtno] = useState()
   const [date,setDate] = useState()
@@ -13,29 +14,37 @@ const Numbers = () => {
   const numbers = [];
 
   const generateNumbers = () => {
-    for (let i = 1; i <= printData; i++) {
+    for (let i = skidnofrom; i <= skidnoto; i++) {
       numbers.push(i);
     }
-
+    console.log(numbers)
     return numbers;
   };
+
+  useEffect(() => {
+    const redirectTimer = setTimeout(() => {
+      numbers != '' ? window.print() : alert("please enter the skid numbers");
+    }, 10);
+    return () => clearTimeout(redirectTimer);
+  }, [numbers]);
   
 
 
   useEffect(() => {
-    setPrintdata(searchPharams.get('skidno'))
+    setSkidnofrom(searchPharams.get('skidnofrom'))
+    setSkidnoto(searchPharams.get('skidnoto'))
     setGdno(searchPharams.get('gdno'))
     setCtno(searchPharams.get('ctno'))
     setDate(searchPharams.get("date"))
     setName(searchPharams.get('name'))
     setColor(searchPharams.get('color'))
-  }),[searchPharams]
-  console.log("color",color)
+  }),[searchPharams,numbers]
+  console.log("color",searchPharams.get('skidnoto'))
   const numbersArray = generateNumbers();
 
   return (
     <>
-    {numbersArray.map((number) => (
+    {numbers && numbersArray.map((number) => (
     <div className="mainContainer" key={number}>
           <div className="labelcontainer">
           <div className="skidlabel">
