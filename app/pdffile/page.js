@@ -15,7 +15,8 @@ const Numbers = () => {
   const numbers = [];
 
   const generateNumbers = () => {
-    for (let i = skidnofrom; i <= skidnoto; i++) {
+    let i;
+    for (skidnofrom == '' ? i = 1 : i = skidnofrom; i <= skidnoto; i++) {
       numbers.push(i);
     }
     return numbers;
@@ -40,7 +41,8 @@ const Numbers = () => {
     setColor(searchPharams.get('color'))
     setMessage(searchPharams.get('message'))
   }),[searchPharams,numbers]
-  console.log("color",searchPharams.get('message'))
+  console.log("color",searchPharams.get('skidnofrom'))
+  console.log("num",numbers)
   const numbersArray = generateNumbers();
 
   return (
