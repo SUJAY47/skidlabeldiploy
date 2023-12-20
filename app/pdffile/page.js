@@ -11,13 +11,13 @@ const Numbers = () => {
   const [date,setDate] = useState()
   const [name,setName] = useState()
   let [color,setColor] = useState()
+  const [message,setMessage] = useState()
   const numbers = [];
 
   const generateNumbers = () => {
     for (let i = skidnofrom; i <= skidnoto; i++) {
       numbers.push(i);
     }
-    console.log(numbers)
     return numbers;
   };
 
@@ -38,14 +38,16 @@ const Numbers = () => {
     setDate(searchPharams.get("date"))
     setName(searchPharams.get('name'))
     setColor(searchPharams.get('color'))
+    setMessage(searchPharams.get('message'))
   }),[searchPharams,numbers]
-  console.log("color",searchPharams.get('skidnoto'))
+  console.log("color",searchPharams.get('message'))
   const numbersArray = generateNumbers();
 
   return (
     <>
     {numbers && numbersArray.map((number) => (
     <div className="mainContainer" key={number}>
+          <div className="messagebox"><h1>{message}</h1></div>
           <div className="labelcontainer">
           <div className="skidlabel">
             <h1>Skid Label</h1>

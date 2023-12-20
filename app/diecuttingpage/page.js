@@ -11,6 +11,7 @@ const InputData = () => {
     ctno: "",
     date: "",
     name: "",
+    message:""
   });
 
   const handleInputChange = (e) => {
@@ -91,6 +92,16 @@ const InputData = () => {
             id="input5"
             name="name"
             value={inputData.name}
+          />
+        </div>
+        <div className="form-group">
+          <label for="input6">Message box:</label>
+          <input
+            onChange={handleInputChange}
+            type="text"
+            id="input6"
+            name="message"
+            value={inputData.message}
           />
         </div>
         <Link href={{ pathname: "pdffile", query: inputData }}>

@@ -132,8 +132,17 @@ input[type="submit"]:hover {
   /* page-break-after: always; */
 }
 
+.messagebox {
+  min-height: 70px;
+  margin-top: 350px;
+  text-align: center;
+  font-family: 'gergia,serif';
+  font-weight: lighter;
+  font-size: 30px;
+}
+
 .labelcontainer {
-  margin-top: 480px;
+  margin-top: 50px;
   /* min-width: 217mm; */
   /* width: 8.27in; */
   /* height: 11.69in; */
