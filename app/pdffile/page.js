@@ -12,22 +12,23 @@ const Numbers = () => {
   const [name,setName] = useState()
   let [color,setColor] = useState()
   const [message,setMessage] = useState()
-  const numbers = [];
+  const numbers = []
 
   const generateNumbers = () => {
-    let i;
-    for (skidnofrom == '' ? i = 1 : i = skidnofrom; i <= skidnoto; i++) {
+    for (let i = parseInt(skidnofrom, 10); i <= parseInt(skidnoto, 10); i++) {
       numbers.push(i);
     }
     return numbers;
   };
 
+  const numbersArray = generateNumbers();
+
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
-      numbers != '' ? window.print() : alert("please enter the skid numbers");
+      numbers != '' ? window.print() : alert("please enter the skid numbers") , console.log("2");
     }, 10);
     return () => clearTimeout(redirectTimer);
-  }, [numbers]);
+  }, [numbers,skidnofrom]);
   
 
 
@@ -41,9 +42,9 @@ const Numbers = () => {
     setColor(searchPharams.get('color'))
     setMessage(searchPharams.get('message'))
   }),[searchPharams,numbers]
-  console.log("color",searchPharams.get('skidnofrom'))
+  // console.log("skidnofrom",searchPharams.get('skidnofrom'))
+  // console.log("skidnoto",searchPharams.get('skidnoto'))
   console.log("num",numbers)
-  const numbersArray = generateNumbers();
 
   return (
     <>

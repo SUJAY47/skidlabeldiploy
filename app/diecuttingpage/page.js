@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const InputData = () => {
   const [inputData, setInputData] = useState({
-    skidnofrom: "",
-    skidnoto:"",
+    skidnofrom: 1,
+    skidnoto : "",
     gdno: "",
     color:"",
     ctno: "",
