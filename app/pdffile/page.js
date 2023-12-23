@@ -81,7 +81,7 @@ const Numbers = () => {
                 <td style={{fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>
                 }
                 <td>CT Number</td>
-                <td style={{fontFamily:'serif'}}>CT{ctno}</td>
+                <td style={{fontFamily:'serif'}}>CT{ctno}<span></span></td>
               </tr>
             </table>
           </div>
@@ -116,7 +116,7 @@ const Numbers = () => {
             <h>
               Revision #01
               <br/>Effective date:8 March,2023
-              <br/>Supersedas:10 January,2022
+              <br/>Supersedes:10 January,2022
             </h>
             <h>
               Prepared by:QA
