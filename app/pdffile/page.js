@@ -10,6 +10,7 @@ const Numbers = () => {
   const [ctno,setCtno] = useState()
   const [date,setDate] = useState()
   const [name,setName] = useState()
+  const [quantity,setQuantity] = useState();
   let [color,setColor] = useState()
   const [message,setMessage] = useState()
   const numbers = []
@@ -41,6 +42,7 @@ const Numbers = () => {
     setName(searchPharams.get('name'))
     setColor(searchPharams.get('color'))
     setMessage(searchPharams.get('message'))
+    setQuantity(searchPharams.get('quantity'))
   }),[searchPharams,numbers]
   // console.log("skidnofrom",searchPharams.get('skidnofrom'))
   // console.log("skidnoto",searchPharams.get('skidnoto'))
@@ -89,7 +91,7 @@ const Numbers = () => {
             <table className="tabletwo">
               <tr>
                 <td>Die-cutting qty</td>
-                <td></td>
+                <td style={{fontSize:'20px',fontFamily:'serif'}}>{quantity}</td>
                 <td>Date</td>
                 <td>{date}</td>
                 <td>Operator name</td>

@@ -11,7 +11,8 @@ const InputData = () => {
     ctno: "",
     date: "",
     name: "",
-    message:""
+    message:"",
+    quantity:""
   });
 
   const handleInputChange = (e) => {
@@ -85,11 +86,21 @@ const InputData = () => {
           />
         </div>
         <div className="form-group">
-          <label for="input5">Operator name:</label>
+          <label for="input7">Die cutting quantity :</label>
           <input
             onChange={handleInputChange}
             type="text"
             id="input5"
+            name="quantity"
+            value={inputData.quantity}
+          />
+        </div>
+        <div className="form-group">
+          <label for="input5">Operator name:</label>
+          <input
+            onChange={handleInputChange}
+            type="text"
+            id="input6"
             name="name"
             value={inputData.name}
           />
