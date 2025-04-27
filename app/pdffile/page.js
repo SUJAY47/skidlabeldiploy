@@ -73,17 +73,17 @@ const Numbers = () => {
                 </td>
                 {
                 color=='b' ?
-                <td style={{fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
+                <td style={{fontSize:'20px',fontFamily:'serif'}}>{gdno}</td>:
                 color=='bl' ? 
-                <td style={{color:'blue',fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
+                <td style={{color:'blue',fontSize:'20px',fontFamily:'serif'}}>{gdno}</td>:
                 color=='r' ? 
-                <td style={{color:'red',fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
+                <td style={{color:'red',fontSize:'20px',fontFamily:'serif'}}>{gdno}</td>:
                 color=='y'?
-                <td style={{color:'orange',fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>:
-                <td style={{fontSize:'20px',fontFamily:'serif'}}>GD{gdno}</td>
+                <td style={{color:'orange',fontSize:'20px',fontFamily:'serif'}}>{gdno}</td>:
+                <td style={{fontSize:'20px',fontFamily:'serif'}}>{gdno}</td>
                 }
                 <td>CT Number</td>
-                <td style={{fontFamily:'serif'}}>CT{ctno}<span></span></td>
+                <td style={{fontFamily:'serif'}}>{ctno}<span></span></td>
               </tr>
             </table>
           </div>
@@ -133,5 +133,4 @@ const Numbers = () => {
 };
 
 export default Numbers;
-
 
