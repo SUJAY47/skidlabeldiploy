@@ -10,6 +10,8 @@ const COLORS = [
   { value: "y", label: "Orange" },
 ];
 
+const getToday = () => new Date().toISOString().slice(0, 10);
+
 const initialData = {
   skidnofrom: "1",
   skidnoto: "",
@@ -18,7 +20,6 @@ const initialData = {
   ctno: "",
   date: "",
   name: "",
-  message: "",
   quantity: "",
 };
 
@@ -39,7 +40,7 @@ const inputClass =
 
 const InputData = () => {
   const router = useRouter();
-  const [inputData, setInputData] = useState(initialData);
+  const [inputData, setInputData] = useState(() => ({ ...initialData, date: getToday() }));
   const [touched, setTouched] = useState(false);
 
   const handleInputChange = (e) => {
@@ -71,7 +72,7 @@ const InputData = () => {
   };
 
   const handleReset = () => {
-    setInputData(initialData);
+    setInputData({ ...initialData, date: getToday() });
     setTouched(false);
   };
 
@@ -137,7 +138,7 @@ const InputData = () => {
                 Job details
               </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Field label="GD Number">
+                <Field label="GD Number" hint="Also shown as the message at the top of the label">
                   <input
                     onChange={handleInputChange}
                     type="text"
@@ -172,7 +173,7 @@ const InputData = () => {
                     ))}
                   </select>
                 </Field>
-                <Field label="Date">
+                <Field label="Date" hint="Defaults to today">
                   <input
                     onChange={handleInputChange}
                     type="date"
@@ -211,22 +212,6 @@ const InputData = () => {
                   />
                 </Field>
               </div>
-            </section>
-
-            <section>
-              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                Message
-              </h2>
-              <Field label="Message box" hint="Optional note printed above the label">
-                <input
-                  onChange={handleInputChange}
-                  type="text"
-                  id="message"
-                  name="message"
-                  value={inputData.message}
-                  className={inputClass}
-                />
-              </Field>
             </section>
 
             <div className="flex items-center justify-between gap-3 border-t border-slate-100 pt-6">

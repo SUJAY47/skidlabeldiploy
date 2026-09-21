@@ -21,7 +21,6 @@ const Numbers = () => {
   const [name, setName] = useState();
   const [quantity, setQuantity] = useState();
   const [color, setColor] = useState();
-  const [message, setMessage] = useState();
 
   useEffect(() => {
     setSkidnofrom(searchPharams.get("skidnofrom"));
@@ -31,7 +30,6 @@ const Numbers = () => {
     setDate(searchPharams.get("date"));
     setName(searchPharams.get("name"));
     setColor(searchPharams.get("color"));
-    setMessage(searchPharams.get("message"));
     setQuantity(searchPharams.get("quantity"));
   }, [searchPharams]);
 
@@ -127,9 +125,11 @@ const Numbers = () => {
 
       {numbersArray.map((number) => (
         <div className="mainContainer" key={number}>
-          <div className="messagebox">
-            <h1>{message}</h1>
-          </div>
+          {gdno ? (
+            <div className="messagebox">
+              <h1>{gdno}</h1>
+            </div>
+          ) : null}
           <div className="labelcontainer">
             <div className="skidlabel">
               <h1>Skid Label</h1>
