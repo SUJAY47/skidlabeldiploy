@@ -14,15 +14,11 @@ const initialData = {
   quantity: "",
 };
 
-const Field = ({ label, children, hint, error, optional }) => (
+const Field = ({ label, children, hint, error, required }) => (
   <div>
     <label className="mb-1.5 block text-sm font-medium text-slate-700">
       {label}
-      {optional ? (
-        <span className="ml-1 font-normal text-slate-400">(optional)</span>
-      ) : (
-        <span className="ml-0.5 text-red-500">*</span>
-      )}
+      {required ? <span className="ml-0.5 text-red-500">*</span> : null}
     </label>
     {children}
     {error ? (
@@ -91,7 +87,7 @@ const InputData = () => {
                 Skid range
               </h2>
               <div className="grid grid-cols-2 gap-4">
-                <Field label="From" error={touched ? errors.skidnofrom : ""}>
+                <Field label="From" required error={touched ? errors.skidnofrom : ""}>
                   <input
                     onChange={handleInputChange}
                     type="number"
@@ -101,7 +97,7 @@ const InputData = () => {
                     className={inputClass}
                   />
                 </Field>
-                <Field label="To" error={touched ? errors.skidnoto : ""}>
+                <Field label="To" required error={touched ? errors.skidnoto : ""}>
                   <input
                     onChange={handleInputChange}
                     type="number"
@@ -124,6 +120,7 @@ const InputData = () => {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Field
                   label="GD Number"
+                  required
                   error={touched ? errors.gdno : ""}
                   hint={!errors.gdno ? "Also shown as the message at the top of the label" : ""}
                 >
@@ -136,7 +133,7 @@ const InputData = () => {
                     className={inputClass}
                   />
                 </Field>
-                <Field label="CT Number" optional>
+                <Field label="CT Number">
                   <input
                     onChange={handleInputChange}
                     type="text"
@@ -146,7 +143,7 @@ const InputData = () => {
                     className={inputClass}
                   />
                 </Field>
-                <Field label="Date" optional hint="Defaults to today">
+                <Field label="Date" hint="Defaults to today">
                   <input
                     onChange={handleInputChange}
                     type="date"
@@ -164,7 +161,7 @@ const InputData = () => {
                 Production
               </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Field label="Die-cutting quantity" optional>
+                <Field label="Die-cutting quantity">
                   <input
                     onChange={handleInputChange}
                     type="text"
@@ -174,7 +171,7 @@ const InputData = () => {
                     className={inputClass}
                   />
                 </Field>
-                <Field label="Operator name" optional>
+                <Field label="Operator name">
                   <input
                     onChange={handleInputChange}
                     type="text"

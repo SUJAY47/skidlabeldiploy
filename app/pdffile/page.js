@@ -118,11 +118,9 @@ const Numbers = () => {
 
       {numbersArray.map((number) => (
         <div className="mainContainer" key={number}>
-          {gdno ? (
-            <div className="messagebox">
-              <h1>{gdno}</h1>
-            </div>
-          ) : null}
+          <div className="messagebox">
+            <h1>{gdno}</h1>
+          </div>
           <div className="labelcontainer">
             <div className="skidlabel">
               <h1>Skid Label</h1>
