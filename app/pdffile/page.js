@@ -3,12 +3,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
-const COLOR_STYLES = {
-  b: { fontSize: "20px", fontFamily: "serif" },
-  bl: { color: "blue", fontSize: "20px", fontFamily: "serif" },
-  r: { color: "red", fontSize: "20px", fontFamily: "serif" },
-  y: { color: "orange", fontSize: "20px", fontFamily: "serif" },
-};
+const GDNO_STYLE = { fontSize: "20px", fontFamily: "serif" };
 
 const Numbers = () => {
   const searchPharams = useSearchParams();
@@ -20,7 +15,6 @@ const Numbers = () => {
   const [date, setDate] = useState();
   const [name, setName] = useState();
   const [quantity, setQuantity] = useState();
-  const [color, setColor] = useState();
 
   useEffect(() => {
     setSkidnofrom(searchPharams.get("skidnofrom"));
@@ -29,7 +23,6 @@ const Numbers = () => {
     setCtno(searchPharams.get("ctno"));
     setDate(searchPharams.get("date"));
     setName(searchPharams.get("name"));
-    setColor(searchPharams.get("color"));
     setQuantity(searchPharams.get("quantity"));
   }, [searchPharams]);
 
@@ -92,7 +85,7 @@ const Numbers = () => {
     <>
       <div className="print:hidden sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/90 px-6 py-3 backdrop-blur">
         <Link
-          href="/diecuttingpage"
+          href="/"
           className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-700"
         >
           <svg viewBox="0 0 20 20" fill="currentColor" className="mr-1 h-4 w-4">
@@ -149,7 +142,7 @@ const Numbers = () => {
                       <br />
                       GD Number
                     </td>
-                    <td style={COLOR_STYLES[color] || COLOR_STYLES.b}>{gdno}</td>
+                    <td style={GDNO_STYLE}>{gdno}</td>
                     <td>CT Number</td>
                     <td style={{ fontFamily: "serif" }}>{ctno}</td>
                   </tr>
