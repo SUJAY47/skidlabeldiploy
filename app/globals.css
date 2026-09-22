@@ -2,13 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+}
+
 .messagebox {
   min-height: 70px;
-  margin-top: 20px;
+  margin-top: 200px;
   text-align: center;
   font-family: 'gergia,serif';
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .labelcontainer {
@@ -50,7 +61,7 @@
   margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
